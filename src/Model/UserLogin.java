@@ -48,7 +48,7 @@ public class UserLogin {
             stmt.executeUpdate();
             return true;
 
-            // creates admin test account if it doesn't exist
+            // creates admin test account if it doesn't exist d
             String adminSql =
                     "INSERT OR IGNORE INTO users (username, password, isAdmin) " +
                             "VALUES ('admin', '1234', 1);";
