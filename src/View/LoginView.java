@@ -10,6 +10,7 @@ public class LoginView extends JFrame {
     public JButton submitButton;
     public JCheckBox registerCheck;
 
+
     public LoginView() {
 
         setTitle("Login / Register");
@@ -30,6 +31,7 @@ public class LoginView extends JFrame {
         panel.add(new JLabel("Password:"));
         passwordField = new JPasswordField();
         panel.add(passwordField);
+
 
         // Checkbox account checkbox
         registerCheck = new JCheckBox("Register new account");
