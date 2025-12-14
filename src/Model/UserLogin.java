@@ -26,6 +26,10 @@ public class UserLogin {
             // creates the user table
             stmt.execute();
             //System.out.println("Users table ready.");
+            // creates admin test account if it doesn't exist d
+            String adminSql =
+                    "INSERT OR IGNORE INTO users (username, password, isAdmin) " +
+                            "VALUES ('admin', '1234', 1);";
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -48,10 +52,6 @@ public class UserLogin {
             stmt.executeUpdate();
             return true;
 
-            // creates admin test account if it doesn't exist d
-            String adminSql =
-                    "INSERT OR IGNORE INTO users (username, password, isAdmin) " +
-                            "VALUES ('admin', '1234', 1);";
 
         } catch (Exception e) {
             // username already exists/error

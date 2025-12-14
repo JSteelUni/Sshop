@@ -18,7 +18,7 @@ public class ItemRetriever {
                 );
                 """;
 
-        //connect to database
+        //  connect to database
         try (Connection conn = DBConnection.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
 
@@ -29,7 +29,7 @@ public class ItemRetriever {
         }
     }
 
-    // Add a new item
+    // add a new item
     //TODO create a addItemView
     //TODO create a description
     public static void addItem(String name, double price, String imagePath) {
@@ -51,7 +51,7 @@ public class ItemRetriever {
         }
     }
 
-    // Update an item
+    //
     public static void updateItem(int id, String name, double price, String imagePath) {
         //update item variables at this ID
         String sql = "UPDATE items SET name=?, price=?, imagePath=? WHERE id=?";
@@ -71,7 +71,7 @@ public class ItemRetriever {
         }
     }
 
-    // Delete an item
+    //
     public static void deleteItem(int id) {
         String sql = "DELETE FROM items WHERE id=?";
 
